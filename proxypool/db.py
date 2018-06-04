@@ -38,7 +38,7 @@ class RedisClient(object):
         if len(result):
             return choice(result)
         else:
-            result = self.db.zrevrange(REDIS_KEY, 0, 100)
+            result = self.db.zrevrange(REDIS_KEY, 0,1)
             if len(result):
                 return choice(result)
             else:
